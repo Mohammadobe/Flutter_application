@@ -10,22 +10,36 @@ class firstStatelessWidget extends StatelessWidget{
 
         appBar: AppBar(
           backgroundColor: Colors.red,
-          title: Icon(Icons.thumb_down),
+          title: Center(child: Icon(Icons.thumb_down)),
         ),
 
         body: Container(
           alignment: Alignment.center,
           color: Colors.amber,
-          child: Text('First stateless'),
+          child: Column(
+            children: [
+              Text('BMW M5 Cs' , style: TextStyle(fontSize: 40)),
+              Image.asset('assets/images/BMW.jpg' , height: 400,)
+            ],
+          ),
         ),
 
         floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.thumb_up),
-          onPressed: () => {},
+          child: Icon(
+            Icons.thumb_up,
+            color: Colors.green,
+            size: 40,
+            ),
+          onPressed: () => {print('So good')},
+          backgroundColor: Colors.red,
         ),
 
       ),
     );
 
   }
+}
+
+void main(){
+  runApp(firstStatelessWidget());
 }
