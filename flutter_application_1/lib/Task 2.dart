@@ -20,52 +20,75 @@ class task2 extends StatelessWidget{
               Column(
                 children: [
                   Text('BMW M5 Cs' , style: TextStyle(fontSize: 40)),
-                  //Image.asset('assets/images/BMW.jpg' , height: 400,)
                 ],
               ),
 
               Column(
                 children: [
-                  Row(
-                    children: [
-                      Image.asset('assets/images/BMW.jpg' , height: 200),
-                      Image.asset('assets/images/BMW.jpg' , height: 200),
-                    ],
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      children: [
+                        Image.asset('assets/Images/BMW.jpg' , height: 100),
+                        Spacer(),
+                        Image.asset('assets/Images/BMW.jpg' , height: 100),
+                      ],
+                    ),
                   ),
 
-                  Row(
-                    children: [
-                      Image.asset('assets/images/BMW.jpg' , height: 200),
-                      Image.asset('assets/images/BMW.jpg' , height: 200),
-                    ],
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      children: [
+                        Image.asset('assets/Images/BMW.jpg' , height: 100),
+                        Spacer(),
+                        Image.asset('assets/Images/BMW.jpg' , height: 100),
+                      ],
+                    ),
                   ),
 
-                  Row(
-                    children: [
-                      Image.asset('assets/images/BMW.jpg' , height: 200),
-                      Image.asset('assets/images/BMW.jpg' , height: 200),
-                    ],
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      children: [
+                        Image.asset('assets/Images/BMW.jpg' , height: 100),
+                        Spacer(),
+                        Image.asset('assets/Images/BMW.jpg' , height: 100),
+                      ],
+                    ),
                   ),
 
-                  Row(
-                    children: [
-                      Image.asset('assets/images/BMW.jpg' , height: 200),
-                      Image.asset('assets/images/BMW.jpg' , height: 200),
-                    ],
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      children: [
+                        Image.asset('assets/Images/BMW.jpg' , height: 100),
+                        Spacer(),
+                        Image.asset('assets/Images/BMW.jpg' , height: 100),
+                      ],
+                    ),
                   ),
 
-                  Row(
-                    children: [
-                      Image.asset('assets/images/BMW.jpg' , height: 200),
-                      Image.asset('assets/images/BMW.jpg' , height: 200),
-                    ],
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      children: [
+                        Image.asset('assets/Images/BMW.jpg' , height: 100),
+                        Spacer(),
+                        Image.asset('assets/Images/BMW.jpg' , height: 100),
+                      ],
+                    ),
                   ),
 
-                  Row(
-                    children: [
-                      Image.asset('assets/images/BMW.jpg' , height: 200),
-                      Image.asset('assets/images/BMW.jpg' , height: 200),
-                    ],
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      children: [
+                        Image.asset('assets/Images/BMW.jpg' , height: 100),
+                        Spacer(),
+                        Image.asset('assets/Images/BMW.jpg' , height: 100),
+                      ],
+                    ),
                   ),
                 ],
               )

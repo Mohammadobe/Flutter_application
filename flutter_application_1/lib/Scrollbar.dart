@@ -20,7 +20,7 @@ class firstStatelessWidget extends StatelessWidget{
               Column(
                 children: [
                   Text('BMW M5 Cs' , style: TextStyle(fontSize: 40)),
-                  Image.asset('assets/images/BMW.jpg' , height: 400,)
+                  Image.asset('assets/Images/BMW.jpg' , height: 400,)
                 ],
               ),
             
@@ -34,7 +34,7 @@ class firstStatelessWidget extends StatelessWidget{
             
               Container(
                 // Text('BMW M5 Cs' , style: TextStyle(fontSize: 40)),
-                child:Image.asset('assets/images/BMW.jpg' , height: 400,)
+                child:Image.asset('assets/Images/BMW.jpg' , height: 400,)
               ),
                 
             ],
