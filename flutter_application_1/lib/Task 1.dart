@@ -14,32 +14,30 @@ class task extends StatelessWidget{
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.blueAccent,
-          title: Center(child: Text('Pharmacy')),
-
-          actions: [
-            IconButton(
-              icon: Icon(Icons.account_circle_rounded),
-              onPressed: () {},
+          title: Container(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('Pharmacy'),
+                ElevatedButton(onPressed: () {} , child: Text('Button'))
+              ],
             ),
-
-            IconButton(
-              icon: Icon(Icons.menu),
-              onPressed: () {},
-            ),
-            
-          ],  
+          ) , 
         ),
         
-        body: Center(
-          child: Column(
-            children: [
-              Text('Welcome to our app ^_^'),
-              Text('Description: An application for selling and distributing medicines'),
-              
-              Image.network(
-                'https://t4.ftcdn.net/jpg/05/11/57/33/360_F_511573386_7OGsN9hPKjcP1QHJG5IyAoBKcaQANHd1.jpg',
-              )
-            ]
+        body: Container(
+          color: Colors.blue[100],
+          child: Center(
+            child: Column(
+              children: [
+                Text('Welcome to our app ^_^'),
+                Text('Description: An application for selling and distributing medicines' , textAlign: TextAlign.center),
+                
+                Image.network(
+                  'https://t4.ftcdn.net/jpg/05/11/57/33/360_F_511573386_7OGsN9hPKjcP1QHJG5IyAoBKcaQANHd1.jpg',
+                )
+              ]
+            ),
           ),
         )
 
