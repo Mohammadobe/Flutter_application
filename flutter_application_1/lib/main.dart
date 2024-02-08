@@ -14,7 +14,17 @@ class myApp extends StatelessWidget{
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.red,
-          title: Text('App Bar'),
+          title: Center(
+            child: Container(
+              color: Colors.orange,
+              child: Text('App Bar' ,
+              style: TextStyle(
+                color: Colors.white , 
+                fontWeight: FontWeight.bold , 
+                fontSize: 20),
+              ),
+            ),
+          ),
         ),
         
         body: Center(
@@ -24,6 +34,7 @@ class myApp extends StatelessWidget{
               Text('Text 2'),
 
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text('Text 3'),
                   Text('Text 4'),
