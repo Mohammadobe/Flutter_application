@@ -26,6 +26,8 @@ class FormPage extends StatefulWidget{
 class _FormPageState extends State<FormPage>{
 
   final  _formKey = GlobalKey<FormState>();
+  String? selectedOption;
+  bool? isChecked = false;
   
   @override
   Widget build(BuildContext context){
@@ -46,25 +48,26 @@ class _FormPageState extends State<FormPage>{
               
               TextFormField(
                 validator: (value) {
+
+                  if(value!.isEmpty){
+                    return  'Please enter your name';
+                  }
                   
-                  if(value!.length == 8){
-                    print(value);
+                  else if(value.length == 8){
+                    // print(value);
                   }
                   
                   else if(value.length < 8){
                     return  'The name must 8 be of letters';
                   }
                   
-                  if(value.isEmpty){
-                    return  'Please enter your name';
-                  }
-
                   return null;
                 },
 
                 decoration: InputDecoration(
                   labelText: 'Name',
                 ),
+
                 onSaved: (newValue) {
                   print('Name: $newValue');
                 },
@@ -75,16 +78,16 @@ class _FormPageState extends State<FormPage>{
               TextFormField(
                 validator: (value) {
 
-                  if(value!.length <= 8){
-                    print(value);
+                  if (value!.isEmpty){
+                    return  'Please enter your password';
+                  }
+
+                  if(value.length <= 8){
+                    // print(value);
                   }
                   
                   else if(value.length > 8){
                     return "Password should be atleast 9 characters long";
-                  }
-
-                  else if (value.isEmpty){
-                    return  'Please enter your password';
                   }
 
                   return null;
@@ -96,9 +99,56 @@ class _FormPageState extends State<FormPage>{
                 onSaved: (newValue) {
                   print('Password: $newValue');
                 },
+                
               ),
 
-              SizedBox(height: 50),
+              Column(
+                children: [
+                  RadioListTile(
+                    title: Text('Male'),
+                    value: 'Male',
+                    groupValue: selectedOption,
+                    onChanged: (value) { 
+                      setState(() {
+                        selectedOption = value;
+                        print('Gender: $value');
+                      });
+                    }
+                  ),
+
+                  RadioListTile(
+                    title: Text('Female'),
+                    value: 'Female',
+                    groupValue: selectedOption,
+                    onChanged: (value) { 
+                      setState(() {
+                      selectedOption = value;
+                      print('Gender: $value');
+                      });
+                    }
+                  ),
+
+                ]
+              ),
+
+              SizedBox(height: 30),
+
+              Row(
+                children: [
+                  CheckboxListTile(
+                    title: Text("Accept Terms and Conditions"),
+                    value: isChecked,   
+                    onChanged: (bool? value){
+                      setState(() {
+                        isChecked = value;
+                      });
+                    
+                    },
+                  ),
+                ],
+              ),
+
+              SizedBox(height: 20),
 
               ElevatedButton(
                 onPressed: () {
