@@ -29,6 +29,7 @@ class _changeDirectionState extends State<changeDirections> {
 
   String image1 = 'assets/Images/Mario.png';
   double posRight = 0;
+  double posLeft = 0;
   double posUp = 460;
 
   @override
@@ -84,17 +85,22 @@ class _changeDirectionState extends State<changeDirections> {
                     ),
           
                     SizedBox(width: 20),
-          
+
                     ElevatedButton(
                       onPressed: (){
                         setState(() {
-                          image1 = 'assets/Images/Mario Left.png';
-                          if(posRight < 330){
-                            posRight += 10;
+                          image1 = 'assets/Images/Mario Right.png';
+                          if(posRight > 0){
+                          posRight -= 20;
                           }
+
+                          if(posRight == 0 && posLeft <= 320){
+                            posLeft += 20;
+                          }
+                          
                         });
-                      },
-                      child: Text('Left')
+                      }, 
+                      child: Text('Right')
                     ),
           
                     SizedBox(width: 20),
@@ -102,20 +108,21 @@ class _changeDirectionState extends State<changeDirections> {
                     ElevatedButton(
                       onPressed: (){
                         setState(() {
-                          image1 = 'assets/Images/Mario Right.png';
-                          if(posRight > 70){
-                          posRight -= 10;
+                          image1 = 'assets/Images/Mario Left.png';
+                          if(posRight < 330 && posLeft >= 0){
+                            posRight += 20;
+                            posLeft -= 20;
                           }
                         });
-                      }, 
-                      child: Text('Right')
+                      },
+                      child: Text('Left')
                     ),
 
                   ],
                 ),
 
                 Container(
-                  margin: EdgeInsets.only(top: posUp , right: posRight),
+                  margin: EdgeInsets.only(top: posUp , right: posRight , left: posLeft),
                   child: Image.asset(image1 , height: 180 ,  width: 70),
                 ),
                 
