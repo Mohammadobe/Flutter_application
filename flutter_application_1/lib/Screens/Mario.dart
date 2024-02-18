@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(myApp());
+void main() => runApp(marioPage());
 
-class myApp extends StatelessWidget{
+class marioPage extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
