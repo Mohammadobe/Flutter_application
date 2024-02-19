@@ -45,7 +45,7 @@ class _PAGE2State extends State<PAGE2>{
 
           IconButton(
             onPressed: (){
-              Navigator.pop(context, '/Task 5');
+              Navigator.popUntil(context, ModalRoute.withName('/'));
             }, 
 
             icon: Icon(Icons.home),
