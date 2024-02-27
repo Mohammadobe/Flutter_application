@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'Screens/AppGem - Page1.dart';
-import 'Screens/AppGem - Page2.dart';
+import 'Screens/Intro.dart';
+import 'Screens/Sign Up.dart';
+import 'Screens/Log In.dart';
+import 'Screens/Forgot password.dart';
+import 'Screens/Verification code.dart';
 
 void main(){
   runApp(appGem());
@@ -13,8 +16,11 @@ class appGem  extends StatelessWidget{
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/AppGem - Page1': (context) => appPage1(),
-        '/AppGem - Page2': (context) => appPage2(),
+        '/Intro': (context) => appPage2(),
+        '/Sign Up': (context) => appPage3(),
+        '/Log In': (context) => appPage4(),
+        '/Forgot password': (context) => appPage5(),
+        '/Verification code': (context) => appPage6(),
       },
       home : AppGemStore(),
     );
@@ -66,7 +72,7 @@ class _AppGemState extends State<AppGemStore>{
                             backgroundColor: Colors.grey.withOpacity(0.8),
                           ),
                           onPressed: (){
-                            Navigator.pushNamed(context, '/AppGem - Page1');
+                            Navigator.pushNamed(context, '/Intro');
                           }, 
                           child: Text('Get Started' , style: TextStyle(color: Colors.white , fontSize: 20),)
                         ),

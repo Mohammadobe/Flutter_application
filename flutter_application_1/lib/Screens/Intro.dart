@@ -1,28 +1,28 @@
 import 'package:flutter/material.dart';
 
 void main(){
-  runApp(appGemPage1());
+  runApp(appGemPage2());
 }
 
-class appGemPage1 extends StatelessWidget{
+class appGemPage2 extends StatelessWidget{
 
   @override
   Widget build(BuildContext context){
     return MaterialApp(
-      home: appPage1(),
+      home: appPage2(),
     );
   }
 
 }
 
-class appPage1 extends StatefulWidget{
+class appPage2 extends StatefulWidget{
 
   @override
-  _appPage1State createState() => _appPage1State();
+  _appPage2State createState() => _appPage2State();
 
 }
 
-class _appPage1State extends State<appPage1>{
+class _appPage2State extends State<appPage2>{
 
   final PageController _pageController = PageController(initialPage: 0);
 
@@ -85,7 +85,7 @@ class _appPage1State extends State<appPage1>{
                     backgroundColor: Colors.grey
                   ),
                   onPressed: (){
-                    Navigator.pushNamed(context, '/AppGem - Page2');
+                    Navigator.pushNamed(context, '/Sign Up');
                   },
                   child: Text('Shopping Now' , style: TextStyle(color: Colors.white , fontSize: 20)),
                 ),
