@@ -85,7 +85,9 @@ class  _appPage6State extends State<appPage6> {
                     SizedBox(height: 50),
               
                     ElevatedButton(
-                      onPressed: (){},
+                      onPressed: (){
+                        Navigator.pushNamed(context, '/Create new password');
+                      },
             
                       child: Text('Next'),
                     ),

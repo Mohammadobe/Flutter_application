@@ -143,7 +143,7 @@ class _appPage2State extends State<appPage2>{
 
                           CircleAvatar(
                             radius: 6,
-                            backgroundColor: 3 == index
+                            backgroundColor: 2 == index
                             ? Colors.red
                             :Colors.white
                           ),
