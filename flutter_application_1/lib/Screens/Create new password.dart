@@ -26,8 +26,11 @@ class  _appPage7State extends State<appPage7> {
 
   final _formKey = GlobalKey <FormState>();
   final TextEditingController _pass = TextEditingController();
-  bool _passwordVisible = false;
-  bool _passwordVisible1 = false;
+  bool _passwordVisible = true;
+  bool _passwordVisible1 = true;
+  String password = '';
+  String confirmPassword = '';
+  Color buttonColor = Colors.grey;
 
   @override
   Widget build(BuildContext context) {
@@ -77,6 +80,14 @@ class  _appPage7State extends State<appPage7> {
             
                     TextFormField(
 
+                      onChanged: (value) {
+
+                        setState(() {
+                          password=value;
+                        });
+
+                      },
+
                       controller: _pass,
                       validator: (value) {
                         
@@ -117,6 +128,25 @@ class  _appPage7State extends State<appPage7> {
                     SizedBox(height: 40),
             
                     TextFormField(
+
+                      onChanged: (value) {
+                        
+                        setState(() {
+                          confirmPassword = value;
+                        });
+
+                        if(confirmPassword == password){
+                          setState(() {
+                             buttonColor = Colors.black;
+                          });
+                        }
+
+                        else{
+                          setState(() {
+                             buttonColor = Colors.grey;
+                          });
+                        }
+                      },
               
                       validator: (value) {
                         
@@ -165,10 +195,28 @@ class  _appPage7State extends State<appPage7> {
                       width: 170,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.grey,
+                          backgroundColor: buttonColor,
                         ),
                         onPressed: (){
-                                  
+
+                          showDialog(
+                            context: context,
+                            builder: (BuildContext context) => AlertDialog(
+                              title: const Text('AlertDialog Title'),
+                              content: const Text('AlertDialog description'),
+                              actions: [
+                                TextButton(
+                                  onPressed: () => Navigator.pop(context, 'Cancel'),
+                                  child: const Text('Cancel'),
+                                ),
+                                TextButton(
+                                  onPressed: () => Navigator.pop(context, 'OK'),
+                                  child: const Text('OK'),
+                                ),
+                              ],
+                            ),
+                          ); 
+
                           if(_formKey.currentState!.validate()){
                             _formKey.currentState!.save();
                           }

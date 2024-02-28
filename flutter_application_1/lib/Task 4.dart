@@ -25,7 +25,7 @@ class _registerPageState extends  State<registerPage> {
 
   final  GlobalKey<FormState> _formkey = GlobalKey<FormState>();
   String? Gender;
-  PhoneNumber _phoneNumber = PhoneNumber(isoCode: '');
+  PhoneNumber phoneNumber = PhoneNumber(isoCode: '');
 
   @override
   Widget build(BuildContext context){
@@ -243,7 +243,7 @@ class _registerPageState extends  State<registerPage> {
                         InternationalPhoneNumberInput(
                           onInputChanged: (PhoneNumber  number) {
                             setState(() {
-                              _phoneNumber = number;
+                              phoneNumber = number;
                               print('Code: $number');
                             });
                           },
