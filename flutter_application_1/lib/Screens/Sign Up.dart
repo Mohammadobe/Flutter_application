@@ -45,6 +45,8 @@ class _appPage3State extends State<appPage3>{
                       margin: EdgeInsets.only(top: 40 , right: 240),
                       child: Text('Create' , style: TextStyle(fontSize: 30 , fontWeight: FontWeight.bold))
                     ),
+
+                    SizedBox(height : 10),
                 
                     Container(
                       margin: EdgeInsets.only(right: 154),
@@ -155,10 +157,10 @@ class _appPage3State extends State<appPage3>{
             
                     SizedBox(
                       height: 60,
-                      width: 150,
+                      width: 160,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.brown[900]
+                          backgroundColor:Color.fromRGBO(45, 32, 28, 1)
                         ),
                         onPressed: (){
                                   

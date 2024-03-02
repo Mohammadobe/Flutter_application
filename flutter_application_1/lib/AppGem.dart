@@ -47,7 +47,7 @@ class _AppGemState extends State<AppGemStore>{
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-              image: Image.asset('assets/Images/GemStore background.jpg').image,
+              image: Image.asset('assets/Images/GemStore background.png').image,
               fit: BoxFit.cover
               ),
             ),
@@ -57,34 +57,39 @@ class _AppGemState extends State<AppGemStore>{
             opacity: 0.5,
             child: Container(
               color: Colors.black,
-              child: Center(
-                child: Container(
-                  margin: EdgeInsets.only(top: 350),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text('Welcome to GemStore!' , style: TextStyle(fontSize: 25 , fontWeight: FontWeight.bold , color: Colors.white)),
-                      SizedBox(height: 10),
-                      Text('The home for a fashionista' , style: TextStyle(fontSize: 18 , color: Colors.white)),
-                      SizedBox(height: 30),
-                      SizedBox(
-                        width: 180,
-                        child: ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.grey.withOpacity(0.8),
-                          ),
-                          onPressed: (){
-                            Navigator.pushNamed(context, '/Intro');
-                          }, 
-                          child: Text('Get Started' , style: TextStyle(color: Colors.white , fontSize: 20),)
-                        ),
-                      ),
-                    ],
+            ),
+          ),
+
+          Center(
+            child: Container(
+              margin: EdgeInsets.only(top: 430),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('Welcome to GemStore!' , style: TextStyle(fontSize: 27 , fontWeight: FontWeight.w700 , color: Colors.white)),
+                  SizedBox(height: 13),
+                  Text('The home for a fashionista' , style: TextStyle(fontSize: 18 , color: Colors.white)),
+                  SizedBox(height: 70),
+                  SizedBox(
+                    width: 210,
+                    height: 60,
+                    child: ElevatedButton(
+                     style: ElevatedButton.styleFrom(
+                       backgroundColor: Color.fromARGB(255, 122, 120, 120).withOpacity(0.96),
+                       side: BorderSide(color: Colors.white , width: 1.2)
+                     ),
+                     onPressed: (){
+                       Navigator.pushNamed(context, '/Intro');
+                     }, 
+                      child: Text('Get Started' , style: TextStyle(color: Colors.white , fontSize: 19 , fontWeight: FontWeight.w700),)
+                    ),
                   ),
-                ),
+
+                ],
               ),
             ),
           ),
+          
         ],
       ),      
     );

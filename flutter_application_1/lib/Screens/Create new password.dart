@@ -35,6 +35,7 @@ class  _appPage7State extends State<appPage7> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       body: Scrollbar(
         thumbVisibility: true,
         child: ListView(
@@ -47,23 +48,34 @@ class  _appPage7State extends State<appPage7> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
 
-                     Container(
-                      margin: EdgeInsets.only(top: 22 , right: 280),
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
+                    Container(
+                      margin: EdgeInsets.only(top: 22 , right: 290),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        shape: BoxShape.circle,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black, 
+                            offset: Offset(0, 0.3)
+                          ),
+                        ],
+                      ), 
+                      child: SizedBox(
+                        height: 43,
+                        child: CircleAvatar(
                           backgroundColor: Colors.white,
-                          shape: CircleBorder(),
-                        ),
-                        onPressed: (){
-                          Navigator.pushNamed(context, '/Verification code');
-                        }, 
-                        child: SizedBox(
-                          height: 45,
-                          child: Icon(Icons.arrow_back_ios_rounded , color: Colors.black , size: 30,),
+                          child: IconButton(
+                            onPressed: (){
+                              Navigator.pushNamed(context, '/Verification code');
+                            },
+                            icon: Icon(Icons.arrow_back_ios_rounded , color: Colors.black),
+                          ),
                         ),
                       ),
                     ),
-                
+              
+                    SizedBox(height: 50),
+
                     Container(
                       margin: EdgeInsets.only(top: 40 , right: 38.7),
                       child: Text('Create new password' , style: TextStyle(fontSize: 30 , fontWeight: FontWeight.bold))
@@ -72,7 +84,7 @@ class  _appPage7State extends State<appPage7> {
                     SizedBox(height: 25),
 
                     Container(
-                      child: Text('your new password must be different from previously used password' , style: TextStyle(fontSize: 17.5),
+                      child: Text('your new password must be different from previously used password' , style: TextStyle(fontSize: 17.5 , color: Colors.grey),
                       ),
                     ),
 

@@ -30,6 +30,7 @@ class  _appPage6State extends State<appPage6> {
   @override
   Widget build(BuildContext context){
     return Scaffold(
+      
       body: Scrollbar(
         thumbVisibility: true,
         child: ListView(
@@ -37,39 +38,48 @@ class  _appPage6State extends State<appPage6> {
             Form(
               key :_formKey,
               child: Container(
-                margin: EdgeInsets.all(35),
                 child: Column(
                   children: [
-                    
+
                     Container(
-                      margin: EdgeInsets.only(top: 22 , right: 260),
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
+                      margin: EdgeInsets.only(top: 22 , right: 290),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        shape: BoxShape.circle,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black, 
+                            offset: Offset(0, 0.3)
+                          ),
+                        ],
+                      ), 
+                      child: SizedBox(
+                        height: 43,
+                        child: CircleAvatar(
                           backgroundColor: Colors.white,
-                          shape: CircleBorder(),
-                        ),
-                        onPressed: (){
-                          Navigator.pushNamed(context, '/Forgot password');
-                        }, 
-                        child: SizedBox(
-                          height: 45,
-                          child: Icon(Icons.arrow_back_ios_rounded , color: Colors.black , size: 30,),
+                          child: IconButton(
+                            onPressed: (){
+                              Navigator.pushNamed(context, '/Forgot password');
+                            },
+                            icon: Icon(Icons.arrow_back_ios_rounded , color: Colors.black),
+                          ),
                         ),
                       ),
                     ),
               
-                    SizedBox(height: 60),
-              
+                    SizedBox(height: 50),
+                    
                     Container(
-                      margin: EdgeInsets.only(right: 89),
+                      margin: EdgeInsets.only(right: 93),
                       child: Text('Verification code' , style: TextStyle(fontSize: 30 , fontWeight: FontWeight.bold)),
                     ),
               
-                    SizedBox(height: 40),
+                    SizedBox(height: 20),
               
                     Container(
+                      margin: EdgeInsets.only(left: 40 , right: 50),
                       child: Text('Please enter the verification code we sent '
-                                  'to your email address' , style: TextStyle(fontSize: 16),
+                                  'to your email address' , style: TextStyle(fontSize: 16 , color: Colors.grey),
                       ),
                     ),
             

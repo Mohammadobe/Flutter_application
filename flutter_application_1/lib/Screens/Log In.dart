@@ -45,6 +45,8 @@ class _appPage4State extends State<appPage4>{
                       margin: EdgeInsets.only(top: 40 , right: 220),
                       child: Text('Log into' , style: TextStyle(fontSize: 30 , fontWeight: FontWeight.bold))
                     ),
+
+                    SizedBox(height : 10),
                 
                     Container(
                       margin: EdgeInsets.only(right: 154),
@@ -117,10 +119,10 @@ class _appPage4State extends State<appPage4>{
             
                     SizedBox(
                       height: 60,
-                      width: 150,
+                      width: 160,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.brown[900]
+                          backgroundColor: Color.fromRGBO(45, 32, 28, 1)
                         ),
                         onPressed: (){
                                   
