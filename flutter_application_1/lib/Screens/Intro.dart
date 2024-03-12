@@ -66,7 +66,7 @@ class _appPage2State extends State<appPage2>{
                 ),
                 
                 SizedBox(
-                  height: 390.2,
+                  height: 305,
                   child: Container(
                     color: Color.fromARGB(255, 87, 85, 85),
                   ),
@@ -167,7 +167,7 @@ class _appPage2State extends State<appPage2>{
                     side: BorderSide(color: Colors.white , width: 1.2),
                   ),
                   onPressed: (){
-                    Navigator.pushNamed(context, '/Sign Up');
+                    Navigator.pushNamed(context, '/homepage');
                   },
                   child: Text('Shopping Now' , style: TextStyle(color: Colors.white , fontSize: 18 , fontWeight: FontWeight.w700)),
                 ),

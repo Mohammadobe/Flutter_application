@@ -93,6 +93,14 @@ class  _appPage5State extends State<appPage5> {
                           if(value!.isEmpty){
                             return 'enter a valid eamil';
                           }
+
+                          if(value.contains('@gmail.com') == true){
+                            print('Email: $value');
+                          }
+
+                          else{
+                            return "not contain '@gmail.com'";
+                          }
                                   
                           return null;
                         },
