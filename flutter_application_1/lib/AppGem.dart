@@ -6,6 +6,8 @@ import 'Screens/Forgot password.dart';
 import 'Screens/Verification code.dart';
 import 'Screens/Create new password.dart';
 import 'Screens/Home.dart';
+import 'Screens/Search.dart';
+
 
 void main(){
   runApp(appGem());
@@ -25,6 +27,7 @@ class appGem  extends StatelessWidget{
         '/Verification code': (context) => appPage6(),
         '/Create new password': (context) => appPage7(),
         '/Home': (context) => appPage8(),
+        '/Search': (context) => appPage9(),
       },
       home : AppGemStore(),
     );

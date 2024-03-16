@@ -167,7 +167,7 @@ class _appPage2State extends State<appPage2>{
                     side: BorderSide(color: Colors.white , width: 1.2),
                   ),
                   onPressed: (){
-                    Navigator.pushNamed(context, '/homepage');
+                    Navigator.pushNamed(context, '/Home');
                   },
                   child: Text('Shopping Now' , style: TextStyle(color: Colors.white , fontSize: 18 , fontWeight: FontWeight.w700)),
                 ),

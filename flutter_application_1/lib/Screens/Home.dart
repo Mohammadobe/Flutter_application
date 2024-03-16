@@ -28,6 +28,10 @@ class _appPage8State extends  State<appPage8> {
   int _selectedIndex = 0;
   int _selectedIndexBottom = 0;
   bool _isPressed = false;
+ 
+  var modeColor = Colors.white;
+  var buttonColor = Colors.black;
+  var buttonTextColor = Colors.black;
 
   final List images = [
     'assets/Images/image 4.png',
@@ -399,11 +403,14 @@ class _appPage8State extends  State<appPage8> {
         ),
         child: Drawer(
           child: Container(
-            color: Colors.white,
+            color: modeColor,
             child: ListView(
                     
               children: [
                 DrawerHeader(
+                  decoration: BoxDecoration(
+                    color: modeColor,
+                  ),
                   child: Center(
                     child: Row(
                       children: [
@@ -421,14 +428,14 @@ class _appPage8State extends  State<appPage8> {
                           
                               Container(
                                 width: 140,
-                                child: Text('Mohammad Obeidat' , style: TextStyle(fontSize: 13 , fontWeight: FontWeight.bold),)
+                                child: Text('Mohammad Obeidat' , style: TextStyle(fontSize: 13 , fontWeight: FontWeight.bold , color: buttonColor),)
                               ),
 
                               SizedBox(height: 8),
                           
                               Container(
                                 width: 140,
-                              child: Text('mohammadahmad23@gmail.com' , style: TextStyle(fontSize: 11 , fontWeight: FontWeight.w500))
+                              child: Text('mohammadahmad23@gmail.com' , style: TextStyle(fontSize: 11 , fontWeight: FontWeight.bold , color: buttonColor))
                               ),
                           
                             ],
@@ -530,6 +537,70 @@ class _appPage8State extends  State<appPage8> {
                     Navigator.pop(context);
                     
                   },
+                ),
+
+                ClipRRect(
+                  borderRadius: BorderRadius.all(Radius.circular(20)),
+                  child: Container(
+                    height: 40,
+                    margin: EdgeInsets.only(top: 40),
+                    child: Row(
+                      children: [
+                  
+                        Container(
+                          height: 35,
+                          margin: EdgeInsets.only(left: 45),
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: modeColor
+                            ),
+                            onPressed: (){
+                              setState(() {
+                                if((modeColor == Colors.black)) {
+                                  modeColor = Colors.white;
+                                  buttonColor = Colors.black;
+                                  buttonTextColor = Colors.black;
+                                }
+                              });
+                            }, 
+                            child: Row(
+                              children: [
+                                Icon(Icons.light_mode),
+                                Text('Light'),
+                              ],
+                            ),
+                          ),
+                        ),
+                  
+                        SizedBox(width: 10),
+                  
+                        Container(
+                          height: 35,
+                          child: ElevatedButton(
+                             style: ElevatedButton.styleFrom(
+                              backgroundColor: modeColor
+                            ),
+                            onPressed: (){
+                              setState(() {
+                                if (modeColor == Colors.white) {
+                                  modeColor = Colors.black;
+                                  buttonColor = Colors.white;
+                                  buttonTextColor = Colors.white;
+                                }
+                              });
+                            }, 
+                            child: Row(
+                              children: [
+                                Icon(Icons.dark_mode_outlined),
+                                Text('Dark'),
+                              ],
+                            ),
+                          ),
+                        ),
+                  
+                      ],
+                    ),
+                  ),
                 ),
                     
               ],

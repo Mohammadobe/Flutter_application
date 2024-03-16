@@ -9,20 +9,20 @@ class  Search extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home : S()
+      home : appPage9()
     );
   }
 
 }
 
-class S extends StatefulWidget{
+class appPage9 extends StatefulWidget{
 
   @override
-  _S createState() => _S();
+  _appPage9State createState() => _appPage9State ();
 
 }
 
-class  _S extends State<S> {
+class _appPage9State  extends State<appPage9> {
 
   @override
   Widget build(BuildContext context) {
