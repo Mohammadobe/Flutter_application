@@ -18,11 +18,11 @@ class  foundResults extends StatelessWidget {
 class appPage10 extends StatefulWidget{
 
   @override
-  _appPageState createState() => _appPageState();
+  _appPage10State createState() => _appPage10State();
 
 }
 
-class _appPageState extends State<appPage10> {
+class _appPage10State extends State<appPage10> {
 
   var favoriteColor1 = Color.fromARGB(255, 209, 206, 206);
   var favoriteColor2 = Color.fromARGB(255, 209, 206, 206);
